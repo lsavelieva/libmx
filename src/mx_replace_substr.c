@@ -1,6 +1,7 @@
 #include "../inc/libmx.h"
 
-static int str_size(const char *str, const char *sub, const char *replace, int count) {
+static int str_size(const char *str, const char *sub,
+const char *replace, int count) {
     int size;
     int diff;
     int sub_l = mx_strlen(sub);
@@ -11,7 +12,8 @@ static int str_size(const char *str, const char *sub, const char *replace, int c
     return size;
 }
 
-static char *str_rep(const char *str, const char *sub, const char *replace, int count) {
+static char *str_rep(const char *str, const char *sub,
+const char *replace, int count) {
     int size = str_size(str, sub, replace, count);
     char *tmp = (char*)malloc((size + 1) * sizeof(char));
     int sub_l = mx_strlen(sub);
@@ -31,7 +33,8 @@ static char *str_rep(const char *str, const char *sub, const char *replace, int 
     return tmp;
 }
 
-char *mx_replace_substr(const char *str, const char *sub, const char *replace) {
+char *mx_replace_substr(const char *str, const char *sub,
+const char *replace) {
     char *res;
     int count;
 
