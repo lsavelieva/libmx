@@ -33,7 +33,7 @@ char *mx_nbr_to_hex(unsigned long nbr) {
         nbr = nbr / 16;
         i++;
     }
-    for (int i = 0; i < len; i++) {
+    for (i = 0; i < len; i++) {
         res[i] = hex[len - i - 1];
     } 
     free(hex);

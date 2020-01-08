@@ -5,7 +5,7 @@ void mx_pop_back(t_list **head) {
     t_list *prev_node = NULL;
 
     if (!head || !(*head))
-        exit(-1);
+        return;
     work_node = *head;
     while (work_node->next) {
         prev_node = work_node;
@@ -20,4 +20,3 @@ void mx_pop_back(t_list **head) {
         prev_node->next = NULL;
    }
 }
-
