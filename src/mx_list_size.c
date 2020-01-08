@@ -5,7 +5,7 @@ int mx_list_size(t_list *list) {
     int count = 0;
 
     if (!list)
-        return -1;
+        return count;
     node = list;
     while (node) {
         count++;
@@ -13,4 +13,3 @@ int mx_list_size(t_list *list) {
     }
     return count;
 }
-
