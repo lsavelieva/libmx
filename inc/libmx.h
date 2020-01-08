@@ -1,5 +1,5 @@
-#ifndef LIBMX
-#define LIBMX
+#ifndef LIBMX_H
+#define LIBMX_H
 
 #include <unistd.h>
 #include <stdlib.h>
@@ -87,4 +87,3 @@ bool mx_isdigit(int c);
 bool mx_isalpha(int c);
 
 #endif
-

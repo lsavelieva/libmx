@@ -125,8 +125,8 @@ OBJ = mx_binary_search.o \
 all: install
 
 install:
-	clang $(CFLAGS) $(INC) -c $(SRC)
-	ar -rcs $(NAME) $(OBJ)
+	clang $(CFLAGS) -c $(SRC) -I $(INC)
+	ar -rc $(NAME) $(OBJ)
 	mkdir -p obj
 	mv $(OBJ) obj
 
