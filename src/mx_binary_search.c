@@ -1,14 +1,14 @@
 #include "../inc/libmx.h"
 
 int mx_binary_search(char **arr, int size, const char *s, int *count) {
+    int min = 0;
+    int mid;
+    int max;
+
     if (!s) {
         return -1;
     }
-
-    int min = 0;
-    int mid;
-    int max = size - 1;
-
+    max = size - 1;
     *count = 0;
     while (min <= max) {
         *count += 1;

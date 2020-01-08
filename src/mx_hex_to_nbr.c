@@ -13,7 +13,7 @@ unsigned long mx_hex_to_nbr(const char *hex) {
     size = st_len(hex);
     for (int i = 0, j = size - 1; i < size; i++) {
         nbr += st_chartoin(hex[i]) * st_pow(16, j);
-	j--;
+	    j--;
     }
     return nbr;
 }
@@ -45,18 +45,4 @@ static unsigned int st_chartoin(char symb) {
         return symb - 87;
     return -1;
 }
-/*
-unsigned long mx_hex_to_nbr(const char *hex) {
-    int size;
-    unsigned long nbr = 0;
-printf("%s\n", "WTF");
-    if (!hex)// || hex == "0")
-        return nbr;
-    size = st_len(hex);
-    for (int i = 0, j = size - 1; i < size; i++) {
-        nbr += st_chartoin(hex[i]) * st_pow(16, j);
-	j--;
-    }
-    return nbr;
-}
-*/
+
